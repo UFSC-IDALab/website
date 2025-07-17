@@ -1,9 +1,6 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+"BRACIS":
+  url: https://sol.sbc.org.br/index.php/bracis/about
 
-"PhysRev":
-  url: https://journals.aps.org/
+"ENIAC":
+  url: https://sol.sbc.org.br/index.php/eniac/about
 
-"Vision":
-  color: "#009f36"

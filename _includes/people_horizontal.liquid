@@ -1,0 +1,43 @@
+<div class="col mb-4">
+  <a href="{% if person.redirect %}{{ person.redirect }}{% else %}{{ person.url | relative_url }}{% endif %}">
+    <div class="card h-200 hoverable">
+      <div class="row no-gutters">
+        {% if person.img %}
+          <div class="col-md-6 d-flex align-items-center justify-content-center">
+	  <div class="card-img-wrapper mx-auto" style="width: 75%; aspect-ratio: 3/4; overflow: hidden;">
+{% include figure.liquid
+loading="eager"
+path=person.img
+sizes="(min-width: 768px) 200px, 50vw"
+alt="person thumbnail"
+class="img-fluid zoom-img"
+%}
+</div>
+
+	</div>
+        {% endif %}
+        <div class="{% if person.img %}col-md-6{% else %}col-md-12{% endif %}">
+          <div class="card-body">
+            <h4 class="card-title">{{ person.title }}</h4>
+            <p class="card-text">{{ person.description }}</p>
+            <div class="row ml-1 mr-1 p-0">
+              {% if person.github %}
+                <div class="github-icon">
+                  <div class="icon" data-toggle="tooltip" title="Code Repository">
+                    <a href="{{ person.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
+                  </div>
+                  {% if person.github_stars %}
+                    <span class="stars" data-toggle="tooltip" title="GitHub Stars">
+                      <i class="fa-solid fa-star"></i>
+                      <span id="{{ person.github_stars }}-stars"></span>
+                    </span>
+                  {% endif %}
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

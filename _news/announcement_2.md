@@ -1,33 +1,35 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: Highway to... Determining Fatal Outcomes in Traffic Accidents
+headline: |
+    Paper accepted at BRACIS 2025!
+    
+    Highway to... 
+    Determining Fatal Outcomes in Traffic Accidents Based on Police Reports
+date: 2025-06-23 16:11:00-0400
 inline: false
-related_posts: false
+related_posts: true
+giscus_comments: true
+image: /assets/img/bracis_logo_2025.png 
+categories: news research conference publication
+tags: [paper, bracis, conference, xAI, "road safety"]
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
+<style>body {text-align: justify}</style>
 
----
 
-Jean shorts raw denim Vice normcore, art party High Life PBR skateboard stumptown vinyl kitsch. Four loko meh 8-bit, tousled banh mi tilde forage Schlitz dreamcatcher twee 3 wolf moon. Chambray asymmetrical paleo salvia, sartorial umami four loko master cleanse drinking vinegar brunch. <a href="https://www.pinterest.com">Pinterest</a> DIY authentic Schlitz, hoodie Intelligentsia butcher trust fund brunch shabby chic Kickstarter forage flexitarian. Direct trade <a href="https://en.wikipedia.org/wiki/Cold-pressed_juice">cold-pressed</a> meggings stumptown plaid, pop-up taxidermy. Hoodie XOXO fingerstache scenester Echo Park. Plaid ugh Wes Anderson, freegan pug selvage fanny pack leggings pickled food truck DIY irony Banksy.
+<div style="float: right; margin: 0 0 1em 1em;">
+  <img src="/assets/img/bracis_logo_2025.png" alt="Descrição da imagem" width="250">
+</div>
 
-#### Hipster list
+The paper _Highway to… Determining Fatal Outcomes in Traffic Accidents Based on Police Reports_ just got accepted for publication at the [35th Brazilian Conference on Intelligent Systems (BRACIS)](https://bracis.sbc.org.br/2025/). The paper is authored by Arthur M. P. Gabardo[^1], Guilherme A. A. Schünemann, [Pablo A. Jaskowiak](https://pajaskowiak.github.io)[^1], Benjamin G. Moreira[^1], and Ricardo J. Pfitscher[^1].
 
-<ul>
-    <li>brunch</li>
-    <li>fixie</li>
-    <li>raybans</li>
-    <li>messenger bag</li>
-</ul>
+The paper addresses Brazil’s ongoing road safety challenges, particularly the high number of fatal accidents on its federal highways. With one of the largest road networks in the world, the country faces significant social and economic impacts from traffic-related incidents. This study presents a case analysis focused on the southern region of Brazil, applying and comparing three machine learning models — Random Forest (RF), k-Nearest Neighbors (kNN), and Multilayer Perceptron (MLP) — to classify the severity of road accidents.
 
-Hoodie Thundercats retro, tote bag 8-bit Godard craft beer gastropub. Truffaut Tumblr taxidermy, raw denim Kickstarter sartorial dreamcatcher. Quinoa chambray slow-carb salvia readymade, bicycle rights 90's yr typewriter selfies letterpress cardigan vegan.
+Using open data provided by the Brazilian Federal Highway Police (PRF) from 2021 to 2024, extensive preprocessing was conducted, including categorical variable encoding, feature selection, and the application of the SMOTE technique to mitigate class imbalance. The models were evaluated using key performance metrics such as specificity, F1-score, and AUC-ROC. Among the findings, both RF and kNN (with SMOTE) demonstrated excellent performance in predicting fatal accidents, each achieving an AUC-ROC of 0.99. In addition to model evaluation, the paper includes a post-hoc analysis using Shapley Additive Explanations (SHAP) to identify the most influential features associated with accident severity, providing valuable insights into the factors that contribute most to fatalities on Brazilian highways.
 
----
+As detailed in the [conference website](https://bracis.sbc.org.br/2025/): “BRACIS is one of the most important events in Brazil for researchers aiming to publish significant and novel results in the fields of Artificial Intelligence (AI) and Computational Intelligence (CI). It was established through the merger of the two most prominent scientific events in Brazil dedicated to AI (SBIA) and CI (SBRN).”
 
-Pug heirloom High Life vinyl swag, single-origin coffee four dollar toast taxidermy reprehenderit fap distillery master cleanse locavore. Est anim sapiente leggings Brooklyn ea. Thundercats locavore excepteur veniam eiusmod. Raw denim Truffaut Schlitz, migas sapiente Portland VHS twee Bushwick Marfa typewriter retro id keytar.
+As soon as the paper is out, it will be linked in the publications page.
 
-> We do not grow absolutely, chronologically. We grow sometimes in one dimension, and not in another, unevenly. We grow partially. We are relative. We are mature in one realm, childish in another.
-> —Anais Nin
-
-Fap aliqua qui, scenester pug Echo Park polaroid irony shabby chic ex cardigan church-key Odd Future accusamus. Blog stumptown sartorial squid, gastropub duis aesthetic Truffaut vero. Pinterest tilde twee, odio mumblecore jean shorts lumbersexual.
+[^1]: Researchers affiliated with the IDA Lab – UFSC.
