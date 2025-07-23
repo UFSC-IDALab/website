@@ -10,17 +10,18 @@ category: academics
 
 ## Affiliation and Position
 Professor at the **Federal University of Santa Catarina (UFSC)**, Joinville, Brazil.  
-Permanent faculty member of the **Graduate Program in Electrical and Systems Engineering (PPGESE)**.
+Permanent faculty member of the **Graduate Program in Electronic Systems Engineering (PPGESE)**.
 
 ---
 
 ## Research Interests
-My research focuses on **computer networks management**, emphasizing emerging technologies. Key areas of interest include:
+My research historically focused on **computer networks management**, nowadays I have shifted to **Applications of Artificial Intelligence**. Key areas of interest include:
 
 - **Artificial Intelligence**
 - **Machine Learning**
 - **Network Functions Virtualization (NFV)**
 - **Intent-Based Networking**
+- **Geotechnical Engineering Supported by AI**
 - **Sentiment Analysis**
 - **Student Dropout Prediction**
 
@@ -33,20 +34,25 @@ Some of my most notable contributions involve:
 - Refining **network intents** for **self-driving networks**.
 - Using **natural language** for intent-based network management.
 - Developing **models to monitor and identify bottlenecks** in **Virtual Network Function (VNF) service chains**.
-
-My **doctoral thesis** was focused on creating a model to quantify the "guiltiness" of a VNF in causing bottlenecks within a service chain.
+- Designing and implementing solutions for **geotechnical engineering** problems.
 
 ---
 
 ## Education
 - **Ph.D.** in Computer Science 
   Research topic: *Model to quantify the “guiltiness” of a Virtual Network Function in causing bottlenecks within a service chain*.
+- **MSc.** in Applied Computing
+  Research topic: *Diagnosing resource provisioning for virtual machines in IaaS clouds*.
+- **Postgraduate degree** in Applied Computing
+  Research topic: *Analytical model for performance evaluation in the Xen virtualization plataform*
+- **BSc.** in Computer Science
+  Research topic: *Cost-benefit analysis of virtualization for server consolidation*
 
 ---
 
 ## Contact Information
 Institutional email: ricardo.pfitscher at ufsc.br
-[UFSC Official Website](https://www.ufsc.br)
+
 
 ---
 
