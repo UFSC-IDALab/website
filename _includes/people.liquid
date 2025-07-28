@@ -1,41 +1,42 @@
 <div class="col">
-  {% unless person.disable_link %}
-  <a href="{% if person.redirect %}{{ person.redirect }}{% else %}{{ person.url | relative_url }}{% endif %}">
-  {% endunless %}
-  
-    <div class="card h-100 hoverable">
-      {% if person.img %}
-        {%
-          include figure.liquid
-          loading="eager"
-          path=person.img
-          sizes = "250px"
-          alt="person thumbnail"
-          class="card-img-top"
-        %}
-      {% endif %}
-      <div class="card-body">
-        <h5 class="card-title">{{ person.title }}</h5>
-        <div class="row ml-1 mr-1 p-0">
-          {% if person.github %}
-            <div class="github-icon">
-              <div class="icon" data-toggle="tooltip" title="Code Repository">
-                <a href="{{ person.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
-              </div>
-              {% if person.github_stars %}
-                <span class="stars" data-toggle="tooltip" title="GitHub Stars">
-                  <i class="fa-solid fa-star"></i>
-                  <span id="{{ person.github_stars }}-stars"></span>
-                </span>
-              {% endif %}
+  <div class="card h-100 hoverable">
+    {% if person.img %}
+      {%
+        include figure.liquid
+        loading="eager"
+        path=person.img
+        sizes="250px"
+        alt="person thumbnail"
+        class="card-img-top"
+      %}
+    {% endif %}
+
+    <div class="card-body d-flex flex-column justify-content-between">
+      {% unless person.disable_link %}
+        <a class="stretched-link text-decoration-none" href="{% if person.redirect %}{{ person.redirect }}{% else %}{{ person.url | relative_url }}{% endif %}">
+      {% endunless %}
+
+        <h5 class="card-title-under text-center" title="{{ person.title }}">{{ person.title }}</h5>
+
+      {% unless person.disable_link %}
+        </a>
+      {% endunless %}
+
+      <div class="row ml-1 mr-1 p-0 mt-auto">
+        {% if person.github %}
+          <div class="github-icon d-flex align-items-center">
+            <div class="icon" data-toggle="tooltip" title="Code Repository">
+              <a href="{{ person.github }}"><i class="fa-brands fa-github gh-icon"></i></a>
             </div>
-          {% endif %}
-        </div>
+            {% if person.github_stars %}
+              <span class="stars ml-2" data-toggle="tooltip" title="GitHub Stars">
+                <i class="fa-solid fa-star"></i>
+                <span id="{{ person.github_stars }}-stars"></span>
+              </span>
+            {% endif %}
+          </div>
+        {% endif %}
       </div>
     </div>
-
-  {% unless person.disable_link %}
-  </a>
-  {% endunless %}
+  </div>
 </div>
-

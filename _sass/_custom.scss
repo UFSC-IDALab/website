@@ -1,3 +1,6 @@
+/* -----------------------
+   Badge Styling
+------------------------ */
 .badge-secondary {
   background-color: unset !important;
   color: #aaa !important;
@@ -5,12 +8,12 @@
   padding: 2px 6px;
   border-radius: 4px;
   border: 1px solid #444;
-  display: inline-block; /* ensures it doesn’t stretch */
+  display: inline-block;
   height: auto !important;
   line-height: 1 !important;
   box-shadow: none;
-  margin-left: 0.5rem; /* optional spacing from text */
-  vertical-align: middle; /* aligns with text baseline */
+  margin-left: 0.5rem;
+  vertical-align: middle;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +24,9 @@
   }
 }
 
+/* -----------------------
+   Image Wrapping for Cards
+------------------------ */
 .fixed-img-wrapper {
   width: 100%;
   aspect-ratio: 3 / 4;
@@ -36,17 +42,23 @@
   object-fit: cover;
 }
 
-
+/* -----------------------
+   Card Layout
+------------------------ */
 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   border: 2px solid rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 
 .card-img-wrapper {
   overflow: hidden;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
+/* Zoom on hover */
 .zoom-img {
   transition: transform 0.4s ease;
 }
@@ -55,5 +67,49 @@
   transform: scale(1.2);
 }
 
+/* -----------------------
+   Card Content
+------------------------ */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Make cards equal height */
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px; /* fixed height for all images */
+  width: 100%;
+}
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title-under {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  line-height: 1.4em;
+  height: calc(1.4em * 4); /* exactly 4 lines */
+  margin-bottom: 0.5rem;
+}
 
 
+
+/* -----------------------
+   GitHub Icon Block
+------------------------ */
+.github-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  min-height: 1.5em;
+}

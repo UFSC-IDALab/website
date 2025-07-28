@@ -13,31 +13,35 @@ horizontal: true
 
 {% if site.enable_project_categories and page.display_categories %}
 
-  {% for category in page.display_categories %}
-    <a id="{{ category }}" href=".#{{ category }}">
-      <h2 class="category">{{ category | capitalize }}</h2>
-    </a>
+{% for category in page.display_categories %}
+  <a id="{{ category }}" href=".#{{ category }}">
+    <h2 class="category">{{ category | capitalize }}</h2>
+  </a>
 
-    {% assign categorized_people = site.people | where: "category", category %}
+  {% assign categorized_people = site.people | where: "category", category %}
+  {% if category == "academics" %}
     {% assign sorted_people = categorized_people | sort: "importance" %}
+  {% else %}
+    {% assign sorted_people = categorized_people | sort: "title" %}
+  {% endif %}
 
-    <div class="container">
-      <div class="row">
-        {% for person in sorted_people %}
-          {% if category == "academics" %}
-            <div class="col-12 col-md-6 mb-4">  <!-- 2 per row on md+ -->
-              {% include people_horizontal.liquid person=person %}
-            </div>
-          {% else %}
-            <div class="col-6 col-md-3 mb-4">  <!-- 4 per row on md+ -->
-              {% include people.liquid person=person %}
-            </div>
-          {% endif %}
-        {% endfor %}
-      </div>
+  <div class="container">
+    <div class="row">
+      {% for person in sorted_people %}
+        {% if category == "academics" %}
+          <div class="col-12 col-md-6 mb-4">
+            {% include people_horizontal.liquid person=person %}
+          </div>
+        {% else %}
+          <div class="col-6 col-md-3 mb-4">
+            {% include people.liquid person=person %}
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
+  </div>
+{% endfor %}
 
-  {% endfor %}
 
 {% else %}
 

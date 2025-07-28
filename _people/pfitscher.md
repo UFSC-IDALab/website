@@ -6,8 +6,6 @@ importance: 4
 category: academics 
 ---
 
-# Ricardo José Pfitscher
-
 ## Affiliation and Position
 Professor at the **Federal University of Santa Catarina (UFSC)**, Joinville, Brazil.  
 Permanent faculty member of the **Graduate Program in Electronic Systems Engineering (PPGESE)**.
