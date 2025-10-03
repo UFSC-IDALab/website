@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Publications produced by the group following the establishment of the laboratory (2025).
+description: Publications from lab members.
 nav: true
 nav_order: 2
 ---
