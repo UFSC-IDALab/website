@@ -62,3 +62,12 @@ horizontal: true
 </div>
 
 <h2 class="category">Alumni</h2>
+
+<ul class="alumni-list">
+  {% assign alumni = site.people | where: "category", "alumni" | sort: "title" %}
+  {% for person in alumni %}
+    <li>
+      <a href="{{ person.redirect }}">{{ person.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
