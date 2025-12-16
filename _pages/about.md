@@ -21,6 +21,9 @@ announcements:
   scrollable: false # adds a vertical scroll bar if there are more than 3 news items
   limit: 5 # leave blank to include all the news in the `_news` folder
 
+carousel:
+  limit: 1
+
 latest_posts:
   enabled: false
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
@@ -118,7 +121,7 @@ latest_posts:
 
 <div class="news-carousel-container">
   <div class="carousel-track">
-    {% assign news_limit = page.announcements.limit | default: 5 %}
+    {% assign news_limit = page.carousel.limit | default: 5 %}
     {% assign news_items = site.news | sort: "date" | reverse | slice: 0, news_limit %}
     {% for item in news_items %}
       {% assign tag = "a" %}
